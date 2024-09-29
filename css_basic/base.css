@@ -12,6 +12,9 @@ body {
   background-color: #f4f4f4;
   color: #333;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 h1,
@@ -35,4 +38,42 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Style header, footer, and main */
+header,
+footer {
+  background-color: #f1f1f1; /* Optional: Background for visual distinction */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Flexbox for main to arrange article and aside horizontally */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* Allows the main to grow and fill the remaining space */
+}
+
+/* Set article to take 2/3 of the width */
+article {
+  flex: 2;
+  padding: 20px;
+  background-color: #e2e2e2; /* Optional: Background for visual distinction */
+  overflow-y: auto; /* Allows scrolling within the article content */
+}
+
+/* Set aside to take 1/3 of the width */
+aside {
+  flex: 1;
+  padding: 20px;
+  background-color: #c2c2c2; /* Optional: Background for visual distinction */
+  overflow-y: auto; /* Allows scrolling within the aside content */
+}
+
+/* Optional: Footer at the bottom with some padding */
+footer {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
 }
